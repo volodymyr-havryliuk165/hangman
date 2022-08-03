@@ -1,0 +1,12 @@
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  min-height: 50vh;
+  margin-inline: auto;
+}
+
+.flexbox > .error-container {
+  flex-grow: 1;
+}
