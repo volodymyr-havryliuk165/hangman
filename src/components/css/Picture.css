@@ -1,4 +1,58 @@
 .picture {
   display: grid;
-  grid-template-areas: "";
+  grid-template-areas: ". h-main h-main h-main h-main ."
+                       ". v-main . . rope ."
+                       ". v-main . . head ."
+                       ". v-main . handL body handR"
+                       ". v-main . . body ."
+                       ". v-main . legL . legR"
+                       "l-main . r-main . . .";
+}
+
+.picture > * {
+  border: 1px solid red;
+}
+
+.h-beam {
+  grid-area: h-main;
+}
+
+.v-beam {
+  grid-area: v-main;
+}
+
+.rope {
+  grid-area: rope;
+}
+
+.head {
+  grid-area: head;
+}
+
+.hand.right {
+  grid-area: handR;
+}
+
+.hand.left {
+  grid-area: handL;
+}
+
+.body {
+  grid-area: body;
+}
+
+.leg.right {
+  grid-area: legR;
+}
+
+.leg.left {
+  grid-area: legL;
+}
+
+.support.left {
+  grid-area: l-main;
+}
+
+.support.right {
+  grid-area: r-main;
 }

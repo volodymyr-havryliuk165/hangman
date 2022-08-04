@@ -1,0 +1,3 @@
+.flexbox > .error-container {
+  flex-grow: 1;
+}

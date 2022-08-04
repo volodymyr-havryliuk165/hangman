@@ -56,10 +56,7 @@ export default function Game() {
   }
 
   return (
-    <div className="game">
-      <Errors errors={user.errors} />
-      <Word word={selectedWord} input={user.guess} />
-      <Notification show={show} />
+    <>
       <Popup
         word={selectedWord}
         reset={() => {
@@ -72,6 +69,11 @@ export default function Game() {
         }}
         gameState={{ win, lose: user.errors.length >= MAX_ERRORS }}
       />
-    </div>
+      <div className="game">
+        <Errors errors={user.errors} />
+        <Word word={selectedWord} input={user.guess} />
+        <Notification show={show} />
+      </div>
+    </>
   );
 }

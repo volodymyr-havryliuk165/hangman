@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+import './css/Popup.css'
 
 export default function Popup({ word, reset, gameState }) {
   const { win, lose } = gameState;
@@ -12,9 +13,11 @@ export default function Popup({ word, reset, gameState }) {
 
   return (
     (win || lose) && (
-      <div className="popup">
-        <h2>{popupHeader}</h2>
-        <button onClick={reset}>Play again</button>
+      <div className="popup-container">
+        <div className="popup">
+          <h2>{popupHeader}</h2>
+          <button onClick={reset}>Play again</button>
+        </div>
       </div>
     )
   );

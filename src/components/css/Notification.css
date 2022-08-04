@@ -1,3 +1,10 @@
 .notification {
-  
+  position: absolute;
+  bottom: calc(var(--fsize) * 4);
+  right: 0;
+  padding: 1rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+  transform: translateX(-25%);
+  animation: fadeIn 1s;
 }
