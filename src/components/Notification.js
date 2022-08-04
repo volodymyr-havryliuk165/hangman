@@ -1,4 +1,5 @@
 import React from 'react'
+import './css/Notification.css'
 
 export default function Notification({show}) {
   return (
