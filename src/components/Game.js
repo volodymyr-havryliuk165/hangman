@@ -9,7 +9,7 @@ import './css/Game.css';
 
 export default function Game() {
   const ALPHABETIC = /^[a-zA-Z]$/i;
-  const MAX_ERRORS = 5;
+  const MAX_ERRORS = 6;
   const words = ['apple', 'peach', 'orange', 'pear'];
 
   const [selectedWord, setWord] = useState(randomWord(words));

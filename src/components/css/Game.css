@@ -6,4 +6,5 @@
   width: 50%;
   min-height: 50vh;
   margin-inline: auto;
+  gap: 3rem;
 }

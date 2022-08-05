@@ -1,20 +1,57 @@
 .picture {
+  --stroke: 15px;
   display: grid;
-  grid-template-areas: ". h-main h-main h-main h-main ."
+  grid-template-areas: ". cornerL h-main h-main cornerR ."
                        ". v-main . . rope ."
                        ". v-main . . head ."
                        ". v-main . handL body handR"
-                       ". v-main . . body ."
                        ". v-main . legL . legR"
+                       ". v-main . . . ."
                        "l-main . r-main . . .";
+  grid-auto-rows: 50px;
+  justify-items: center;
 }
 
 .picture > * {
-  border: 1px solid red;
+  background-color: black;
+}
+
+.vertical {
+  width: var(--stroke);
+}
+
+.horizontal {
+  height: var(--stroke);
+  width: 100%;
+  align-self: flex-end;
+}
+
+.left {
+  --tr: 105%;
+  --angle: -45deg;
+  justify-self: end;
+}
+
+.right {
+  --tr: -105%;
+  --angle: 45deg;
+  justify-self: start;
 }
 
 .h-beam {
   grid-area: h-main;
+}
+
+.corner.left {
+  grid-area: cornerL;
+}
+
+.corner.right {
+  grid-area: cornerR;
+}
+
+.corner {
+  width: 57.5%;
 }
 
 .v-beam {
@@ -27,6 +64,16 @@
 
 .head {
   grid-area: head;
+  width: 50%;
+  border-radius: 100%;
+  background-color: transparent;
+  border: 10px solid black;
+}
+
+.hand {
+  align-self: center;
+  width: 50%;
+  transform: translateX(var(--tr));
 }
 
 .hand.right {
@@ -39,6 +86,21 @@
 
 .body {
   grid-area: body;
+}
+
+.leg,
+.support {
+  transform:translateX(var(--tr)) translateY(-120%)  rotate(var(--angle));
+}
+
+.support.right,
+.leg.right {
+  --tr: -80%;
+}
+
+.support.left,
+.leg.left {
+  --tr: 80%;
 }
 
 .leg.right {
