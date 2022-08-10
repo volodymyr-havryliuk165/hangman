@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: space-between;
   width: 50%;
+  min-width: 600px;
   min-height: 50vh;
   margin-inline: auto;
   gap: 3rem;
